@@ -10,4 +10,4 @@ When you add book to your cart cart will be updated
 
 when you click on your cart, list of items will be on your screen. In this cart there is a option for remove, so you can remove any item. 
 
-![shopping](https://cloud.githubusercontent.com/assets/14014635/11236219/d3147468-8dfd-11e5-8e21-ca6151aafa0d.png)
+![shopping](https://cloud.githubusercontent.com/assets/14014635/11236278/61ce2c62-8dfe-11e5-8a7f-07a653beec73.png)
