@@ -1,1 +1,57 @@
-
+<html ng-app = 'bookSelling'>
+  <head>
+    <title>Online Book Selling</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="app.css"/>
+  </head>
+  <body ng-controller= "bookController as booCtrl">
+    <header> WelCome to BookMarket
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact </a></li>
+        <li><a href="#cart"ng-click="booCtrl.cartVar = true;"><i class="glyphicon glyphicon-shopping-cart"></i>Cart {{booCtrl.cart.length}}
+        </a>
+      </li>
+    </ul>
+</header>
+  <div>
+    <div ng-if="booCtrl.cart.length" ng-show="booCtrl.cartVar" class="cart">
+      <div>
+        <table id="holder">
+          <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Remove</th>
+          </tr>
+          <tr ng-repeat = "book in booCtrl.cart">
+            <td><img id="Cartbooks" ng-src="{{book.image}}"/><br/> {{book.title}}</td>
+            <td><span>{{book.quant}}</span></td>
+            <td>{{book.fakePrice}}</td>
+            <td><i ng-click="booCtrl.remove(book)" class="glyphicon glyphicon-minus"></i></td>
+          </tr>
+          <tr><td>Total</td><td></td><td></td><td>{{booCtrl.totalGetPrice()}}</td></tr>
+          <!--  <tr><td></td><td></td><td><img id="addtocart" ng-src="images/orderNow.jpg"/></td></tr> -->
+        </table>
+        <img id="addtocart" ng-src="images/orderNow.jpg"/>
+      </div>
+    </div>
+    <div id="view" ng-repeat="book in booCtrl.products">
+      <img id="books" ng-src="{{book.image}}"/>
+      <div ng-click='booCtrl.addToCart(book)'>
+        <img id="addtocart" ng-src="images/add-to-cart-button-blue.jpg"/>
+      </div>
+      <div id="discriptionCont">
+        {{book.title}} <br/>
+        Rs:{{book.price|currency:"&#8377;"}}<br/>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

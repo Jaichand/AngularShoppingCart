@@ -1,1 +1,88 @@
+header {
+    background-color:gray;
+    color:white;
+    text-align:center;
+    padding:2px;
+}
+li{
+  display: inline;
+}
+a
+{
+  color:white;
+  background-color:transparent;
+  padding:10px;
+  margin: 50px;
+  text-decoration:none;
+}
+a:hover{
+  color:#DDD;
+  cursor:pointer;
+}
+#addtocart{
+  float: left;
+  height: 30;
+  width: 100;
+  padding: 5px;
+}
+#addtocart:hover{
+  color:#DDD;
+  cursor:pointer;
+}
+.cart{   
+  float: right;
+  width: 300;
+  margin: 5px;
+  padding: 15px;
+  box-shadow:0 2px 10px 0 rgba(1,0,0,0.16),0 2px 5px 0 rgba(1,0,0,0.26);
+}
+#view{
+  float:left;
+  margin: 5px;
+  padding: 30px;
+  width: 250;
+  height: 300;
+  box-shadow:0 2px 10px 0 rgba(1,0,0,0.16),0 2px 5px 0 rgba(1,0,0,0.26);
+}
+#books{
+  float: left;
+  height: 120;
+  width: 100;
+  padding: 5px;
+}
+#Cartbooks{
+  height: 60;
+  width: 50;
+  padding: 5px;
+}
+#discriptionCont{
+  overflow: auto;
+  float: left;
+  margin-left: 5px;
+  height: 80;
+  width: 150;
+ 
+}
+#holder{
+  width: 300;
+  float: left;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
 
+th,td{
+  width: 10;
+  padding: 2px;
+  margin: 2px;
+  border:#eee solid 1px;
+  border-collapse: collapse;
+}
+ span{
+  padding: 5px;
+  margin: 2px;
+  border:#eee solid 1px;
+} 
+#contact{
+  height: 300;
+  width: 300;
+}
